@@ -51,7 +51,7 @@
             <li>
                 <a href="#services" onclick=$("#menu-close").click();>Skills</a>
             </li>
-            <li>git
+            <li>
                 <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
             </li>
         </ul>
@@ -80,8 +80,7 @@
         <!-- /.container -->
     </section>
 
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <!-- skills -->
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
@@ -193,7 +192,7 @@
         <!-- /.container -->
     </section>
 
-    <!-- Callout -->
+    <!-- title -->
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>Portfolio</h1>
@@ -257,9 +256,6 @@
         <!-- /.container -->
     </section>
 
-    <!-- Call to Action -->
-
-    <!-- Map -->
 
     <!-- Footer -->
     <footer>
@@ -349,26 +345,7 @@
             }
         }
     });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+
     </script>
 
 </body>
